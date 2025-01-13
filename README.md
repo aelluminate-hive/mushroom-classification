@@ -25,7 +25,7 @@ pip install -r requirements.txt
 Run the standalone application to predict the class of a mushroom based on its features:
 
 ```bash
-py -m main
+python main.py
 ```
 
 The application will prompt you to enter the features of the mushroom, such as cap diameter, cap shape, gill attachment, gill color, and others. Once you have entered the features, the application will predict whether the mushroom is edible or poisonous.
@@ -97,7 +97,7 @@ This project is implemented using Python and the following tools and libraries s
 
 The following scatter plot shows the relationship between the cap diameter and stem height of the mushrooms in the dataset. The plot illustrates how the cap diameter and stem height are distributed among the mushrooms, with different colors representing the class of the mushrooms (edible or poisonous).
 
-![Cap Diameter vs Stem Height](https://i.imgur.com/qzteRXb.png)
+![Cap Diameter vs Stem Height](docs/img/viz1.png)
 
 > While cap diameter and stem height can provide some clues to differentiate between edible and poisonous mushrooms, these features alone are not foolproof. There's a degree of overlap between the two groups, suggesting that other factors also play a role. A slight positive correlation exists between cap diameter and stem height, indicating that larger mushrooms might generally have taller stems. However, it's important to note that simply identifying mushrooms based on size alone can be risky, as there's no guarantee that larger mushrooms are always edible.
 
@@ -105,7 +105,7 @@ The following scatter plot shows the relationship between the cap diameter and s
 
 The following scatter plot shows the relationship between the cap diameter and stem width of the mushrooms in the dataset. The plot illustrates how the cap diameter and stem width are distributed among the mushrooms, with different colors representing the class of the mushrooms (edible or poisonous).
 
-![Cap Diameter vs Stem Width](https://i.imgur.com/yhW2HfE.png)
+![Cap Diameter vs Stem Width](docs/img/viz2.png)
 
 > It shows a clear positive correlation between cap diameter and stem height. However, there is also a significant overlap between edible and poisonous mushrooms, indicating that these two features alone are not sufficient to accurately classify mushroom edibility. The trendline suggests a general linear relationship between the two variables, but there are a number of outliers that deviate from this trend. Overall, while cap diameter and stem height can provide some insights into mushroom characteristics, they are not the sole determinants of edibility.
 
@@ -113,7 +113,7 @@ The following scatter plot shows the relationship between the cap diameter and s
 
 The following scatter plot shows the relationship between the stem height and stem width of the mushrooms in the dataset. The plot illustrates how the stem height and stem width are distributed among the mushrooms, with different colors representing the class of the mushrooms (edible or poisonous).
 
-![Stem Height vs Stem Width](https://i.imgur.com/Fmy2nGq.png)
+![Stem Height vs Stem Width](docs/img/viz3.png)
 
 > It shows a weak positive correlation between stem height and stem width. There is a clear overlap between edible and poisonous mushrooms, indicating that these two features alone are not sufficient to accurately classify mushroom edibility. The trendline suggests a slight linear relationship between the two variables, but there are a number of outliers that deviate from this trend. Overall, while stem height and stem width can provide some insights into mushroom characteristics, they are not the sole determinants of edibility.
 
@@ -121,11 +121,11 @@ The following scatter plot shows the relationship between the stem height and st
 
 The following table shows the evaluation metrics for the classification models trained on the Mushroom Dataset:
 
-| Model | Model File | Accuracy | Precision | Recall | F1 Score |
+| Model Name | Model File | Accuracy | Precision | Recall | F1 Score |
 |-------|------------|----------|-----------|--------|----------|
 | K-Nearest Neighbors | [knn.py](/src/training/knn.py) | 0.73 | 0.73 | 0.73 | 0.73 |
 | XGBoost | [xgboost.py](/src/training/xgboost.py) | 0.95 | 0.95 | 0.95 | 0.95 |
-| **(Fine-Tuned) XGBoost** | **[tuning/xgboost](/src/tuning/xgboost.py)** | **0.99** | **0.99** | **0.99** | **0.99** |
+| **(Fine-Tuned) XGBoost** | **[tuning/xgboost.py](/src/tuning/xgboost.py)** | **0.99** | **0.99** | **0.99** | **0.99** |
 | Logistic Regression | [lgr.py](/src/training/lgr.py) | 0.64 | 0.64 | 0.64 | 0.63 |
 | Support Vector Machine | [svm.py](/src/training/svm.py) | 0.65 | 0.65 | 0.65 | 0.65 |
 
